@@ -5,11 +5,11 @@
  * @node: A pointer to the node to check
  *
  * Return: 1 if node is a leaf
- *         0 1 if node is not a leaf or NULL
+ *         0 1 if node is not a leaf or if node is NULL
  */
 int binary_tree_is_leaf(const binary_tree_t *node)
 {
-	if (node->left != NULL || node->right != NULL || node == NULL)
+	if (node == NULL || node->left != NULL || node->right != NULL)
 		return (0);
 	else
 		return (1);
