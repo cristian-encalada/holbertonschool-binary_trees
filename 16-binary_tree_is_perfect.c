@@ -14,12 +14,15 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 	if (tree == NULL)
 		return (0);
 
+	/* 3rd argument = 0 to start traversing from the root at level 0*/
 	return (is_perfect_recursive(tree, maximum_depth(tree), 0));
 }
 
 /**
  * is_perfect_recursive - Helper function to check if a binary tree is perfect
  * @tree: A pointer to the root node of the tree to check
+ * @depth: maximum depth of the binary tree
+ * @level: check the current level of the node
  *
  * Return: If tree is perfect, return 1
  *			If tree is NULL, return 0
